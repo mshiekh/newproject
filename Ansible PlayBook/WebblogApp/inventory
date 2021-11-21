@@ -1,0 +1,16 @@
+[all:children]
+consul_clients
+consul_server
+
+[all:vars]
+ansible_user=adminuser
+ansible_python_interpreter=/usr/bin/python3
+vault_version=1.6.0
+consul_version=1.9.0
+
+[consul_clients]
+webblog-app-vm ansible_host=webblog-01.eastus.cloudapp.azure.com
+webblog-db-vm ansible_host=webblog-02.eastus.cloudapp.azure.com
+
+[consul_server]
+webblog-consul-server ansible_host=webblog-03.eastus.cloudapp.azure.com
