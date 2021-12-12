@@ -10,7 +10,7 @@ from models.user import User
 __author__ = 'SamG'
 
 
-from flask import Flask, render_template, request, session, make_response
+from flask import Flask, render_template, request, session, make_response, url_for
 
 env = Env()
 # Read .env into os.environ
